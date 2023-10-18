@@ -1,6 +1,43 @@
 <?php include "config/config.php" ?>
 <?php include "Header/nav.php" ?>
 
+<?php 
+    // $contact_ftech_query = "SELECT * FROM `contact_information`";
+    // $contact_ftech_prepare = $connection->prepare($contact_ftech_query);
+    // $contact_ftech_prepare->execute();
+    // $contact_fetch = $contact_ftech_prepare->fetchAll(PDO::FETCH_ASSOC);
+    // print_r($contact_fetch);
+    
+    if(isset($_POST['submit']))
+    {
+      $fullName = $_POST['fullName'];
+      $email = $_POST['email'];
+      $subject = $_POST['subject'];
+      $phone = $_POST['phone'];
+      $message = $_POST['message'];
+
+      if(empty($fullName) || empty($emai) || empty($subject) || empty($phone) || empty($message))
+      {
+        // echo "<script>Alert('Kindly fill all the fields')</scrpit>";
+      }else
+      {
+        // if(isset($_SESSION['userId'])){
+          $contact_query = "INSERT INTO `contact_information`(`user_name`, `user_email`, `user_query`, `user_phone`, `user_message`) VALUES (:fullName, :email, :subject, :phone, :message, :userId)";
+
+          $contact_prepare = $connection->prepare($contact_query);
+          $contact_prepare->bindParam(':fullName', $fullName);
+          $contact_prepare->bindParam(':email', $email);
+          $contact_prepare->bindParam(':subject', $subject);
+          $contact_prepare->bindParam(':phone', $phone);
+          $contact_prepare->bindParam(':message', $message);
+          $contact_prepare->bindParam(':userId', $_SESSION['userId']);
+          $contact_prepare->execute();
+          // print_r($contact_prepare);
+        // }
+      }
+    }
+?>
+
 <section class="page-title bg-1">
   <div class="overlay"></div>
   <div class="container">
@@ -64,7 +101,7 @@
     </div>
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
-        <form id="contact-form" class="contact__form " method="post" action="mail.php">
+        <form id="contact-form" class="contact__form " method="post" action="contact.php">
           <!-- form message -->
           <div class="row">
             <div class="col-12">
@@ -77,7 +114,7 @@
           <div class="row">
             <div class="col-lg-6">
               <div class="form-group">
-                <input name="name" id="name" type="text" class="form-control" placeholder="Your Full Name">
+                <input name="fullName" id="name" type="text" class="form-control" placeholder="Your Full Name">
               </div>
             </div>
 
