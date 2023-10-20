@@ -20,7 +20,7 @@
   </div>
 </section>
 
-<section class="appoinment section">
+<!-- <section class="appoinment section">
   <div class="container">
     <div class="row">
       <div class="col-lg-4">
@@ -102,7 +102,111 @@
       </div>
     </div>
   </div>
+</section> -->
+
+
+<section class="appoinment section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+          <div class="mt-3">
+            <div class="feature-icon mb-3">
+              <i class="icofont-support text-lg"></i>
+            </div>
+             <span class="h3">Call for an Emergency Service!</span>
+              <h2 class="text-color mt-3">+84 789 1256 </h2>
+          </div>
+      </div>
+
+      <div class="col-lg-8">
+           <div class="appoinment-wrap mt-5 mt-lg-0 pl-lg-5">
+            <h2 class="mb-2 title-color">Book an appoinment</h2>
+            <p class="mb-4">Mollitia dicta commodi est recusandae iste, natus eum asperiores corrupti qui velit . Iste dolorum atque similique praesentium soluta.</p>
+               <form id="#" class="appoinment-form" method="post" action="#">
+                    <div class="row">
+                         <div class="col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control" id="exampleFormControlSelect1">
+
+                                  <option>Choose Department</option>
+                        
+                                  <option>Orthopedics</option>
+                                  <option>Pediatrics</option>
+                                  <option>Obstetrics and Gynecology</option>
+                                  <option>Surgery</option>
+                                  <option>Cardiology</option>
+                                  <option>Dermatology</option>
+                                  <option>Neurology</option>
+                                  <option>Radiology</option>
+                                  <option>Pathology</option>
+                                  <option>Urology</option>
+                                  <option>Nephrology</option>
+                                  <option>Anesthesiology</option>
+            
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <select class="form-control" id="exampleFormControlSelect2">
+                                  <option>Select Doctors</option>
+                                  <option>Dr. Ali Khan</option>
+                                  <option>Dr. Ayesha Ahmed</option>
+                                  <option>Dr. Muhammad Khan</option>
+                                  <option>Dr. Saima Malik</option>
+                                  <option>Dr. Imran Raza</option>
+                                  <option>Dr. Farah Siddiqui</option>
+                                  <option>Dr. Hassan Malik</option>
+                                  <option>Dr. Samina Shah</option>
+                                  <option>Dr. Usman Qureshi</option>
+                                  <option>Dr. Zara Rehman</option>
+                                  <option>Dr. Ahmed Butt</option>
+                                  <option>Dr. Sadia Akhtar</option>
+                                  
+                                </select>
+                            </div>
+                        </div>
+
+						<div class="col-lg-6">
+                            <div class="form-group">
+                                <input name="patientName" id="name" type="text" class="form-control" placeholder="patientName">
+                            </div>
+
+                        </div>
+
+                         <div class="col-lg-6">
+                            <div class="form-group">
+                                <input name="date" id="date" type="date" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input name="time" id="time" type="time" class="form-control" placeholder="time">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <input name="phoneNumber" id="phone" type="number" class="form-control" placeholder="PhoneNumber">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group-2 mb-4">
+                        <textarea name="description" type="message" id="message" class="form-control" rows="6" placeholder="Descrip Your Ilness......!"></textarea>
+                    </div>
+
+                    <a class="btn btn-main btn-round-full" name= "appoinment" href="confirmation.php">apppoinment<i class="icofont-simple-right ml-2"></i></a>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
+
+
 
 <?php include "Header/footer.php" ?>   
 
