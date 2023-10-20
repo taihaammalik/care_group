@@ -1,44 +1,23 @@
 <!DOCTYPE html>
-
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
 <html lang="en">
 <head>
-
-  <!-- Basic Page Needs
-  ================================================== -->
   <meta charset="utf-8">
   <title>Health Care</title>
-
-  <!-- Mobile Specific Metas
-  ================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Health Care Medical Html5 Template">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta name="author" content="Themefisher">
   <meta name="generator" content="Themefisher Novena HTML Template v1.0">
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
-
-  <!-- 
-  Essential stylesheets
-  =====================================-->
+  <link rel="shortcut icon" type="image/x-icon" href="/images/.png" />
+  <!-- Essential stylesheets-->
   <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="plugins/icofont/icofont.min.css">
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
-
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body id="top">
 
 <header>
@@ -84,6 +63,7 @@
 							aria-haspopup="true" aria-expanded="false">Department <i class="icofont-thin-down"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdown02">
 							<li><a class="dropdown-item" href="department.php">Departments</a></li>
+<<<<<<< HEAD
 							<li><a class="dropdown-item" href="department-single.php">Department Single</a></li>
                     
 							<li class="dropdown dropdown-submenu dropright">
@@ -94,6 +74,20 @@
 									<li><a class="dropdown-item" href="index.php">Submenu 02</a></li>
 								</ul>
 							</li>
+=======
+							<li><a class="dropdown-item" href="department-single.php">Pediatrics</a></li>
+							<li><a class="dropdown-item" href="department-single.php">Obstetrics and Gynecology</a></li>
+							<li><a class="dropdown-item" href="department-single.php">Surgery</a></li>
+							<li><a class="dropdown-item" href="department-single.php">Orthopedics</a></li>
+							<li><a class="dropdown-item" href="department-single.php">Cardiology</a></li>
+							<li><a class="dropdown-item" href="department-single.php">Dermatology</a></li>
+							<li><a class="dropdown-item" href="department.php">See More....</a></li>
+							<!-- <li><a class="dropdown-item" href="department-single.php">Radiology</a></li>
+							<li><a class="dropdown-item" href="department-single.php">Pathology</a></li>
+							<li><a class="dropdown-item" href="department-single.php">Urology</a></li>
+							<li><a class="dropdown-item" href="department-single.php">Nephrology</a></li>
+							<li><a class="dropdown-item" href="department-single.php">Anesthesiology</a></li> -->
+>>>>>>> da038acb5b3cd6c93d0570909d46dc1f4500b839
 						</ul>
 					</li>
 
@@ -104,6 +98,7 @@
 							<li><a class="dropdown-item" href="doctor.php">Doctors</a></li>
 							<li><a class="dropdown-item" href="doctor-single.php">Doctor Single</a></li>
 							<li><a class="dropdown-item" href="appoinment.php">Appoinment</a></li>
+<<<<<<< HEAD
 
 							<li class="dropdown dropdown-submenu dropleft">
 								<a class="dropdown-item dropdown-toggle" href="#!" id="dropdown0501" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sub Menu</a>
@@ -117,16 +112,28 @@
 					</li>
 
 					<!-- <li class="nav-item dropdown">
+=======
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+>>>>>>> da038acb5b3cd6c93d0570909d46dc1f4500b839
 						<a class="nav-link dropdown-toggle" href="blog-sidebar.php" id="dropdown05" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Blog <i class="icofont-thin-down"></i></a>
 						<ul class="dropdown-menu" aria-labelledby="dropdown05">
 							<li><a class="dropdown-item" href="blog-sidebar.php">Blog with Sidebar</a></li>
 							<li><a class="dropdown-item" href="blog-single.php">Blog Single</a></li>
+<<<<<<< HEAD
 						</ul> -->
 					</li>
 					<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
 					<li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
 					<li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+=======
+						</ul>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+>>>>>>> da038acb5b3cd6c93d0570909d46dc1f4500b839
 				</ul>
 			</div>
 		</div>
