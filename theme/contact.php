@@ -16,13 +16,13 @@
       $phone = $_POST['phone'];
       $message = $_POST['message'];
 
-      if(empty($fullName) || empty($emai) || empty($subject) || empty($phone) || empty($message))
+      if(empty($fullName) || empty($email) || empty($subject) || empty($phone) || empty($message))
       {
         // echo "<script>Alert('Kindly fill all the fields')</scrpit>";
       }else
       {
         // if(isset($_SESSION['userId'])){
-          $contact_query = "INSERT INTO `contact_information`(`user_name`, `user_email`, `user_query`, `user_phone`, `user_message`) VALUES (:fullName, :email, :subject, :phone, :message, :userId)";
+          $contact_query = "INSERT INTO `contact_information`(`user_name`, `user_email`, `user_query`, `user_phone`, `user_message`) VALUES (:fullName, :email, :subject, :phone, :message)";
 
           $contact_prepare = $connection->prepare($contact_query);
           $contact_prepare->bindParam(':fullName', $fullName);
@@ -30,7 +30,7 @@
           $contact_prepare->bindParam(':subject', $subject);
           $contact_prepare->bindParam(':phone', $phone);
           $contact_prepare->bindParam(':message', $message);
-          $contact_prepare->bindParam(':userId', $_SESSION['userId']);
+          // $contact_prepare->bindParam(':userId', $_SESSION['userId']);
           $contact_prepare->execute();
           // print_r($contact_prepare);
         // }
@@ -105,7 +105,7 @@
           <!-- form message -->
           <div class="row">
             <div class="col-12">
-              <div class="alert alert-success contact__msg" style="display: none" role="alert">
+              <div class="alert alert-success contact__msg" style="display: none" role="Alert">
                 Your message was sent successfully.
               </div>
             </div>
