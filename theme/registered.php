@@ -3,24 +3,69 @@
 
 <?php
 
-if (isset($_POST['submit'])) {
-    $userName = $_POST['userName'];
-    $userEmail = $_POST['userEmail'];
-    $userPassword = $_POST['userPassword'];
 
-    if (empty($userName) || empty($userEmail) || empty($userPassword)) {
+$fetchRegisteredUser = "SELECT * FROM `user_registered`";
+
+$fetchRegistrationUserPrepare = $connection->prepare($fetchRegisteredUser);
+$fetchRegistrationUserPrepare->execute();
+
+$fetchRegistertedData = $fetchRegistrationUserPrepare->fetchAll(PDO::FETCH_ASSOC);
+
+// print_r($fetchRegistertedData);
+
+
+if (isset($_POST['submit'])) 
+{
+	$userName = $_POST['userName'];
+	$userEmail = $_POST['userEmail'];
+	$userPassword = $_POST['userPassword'];
+
+
+	$isEmailNotExist = false;
+
+if (empty($userName) || empty($userEmail) || empty($userPassword)) 
+{
         echo "<script>alert('please fill all the input fields')</script>";
-    } else {
-        $sqlquery = "INSERT INTO `user_registered`( `user_name`, `user_email`, `user_password`) VALUES (:username, :userEmail,:userPassword)";
+    } 
+	else
+	{
+	foreach($fetchRegistertedData as $user)
+		if ($userEmail === $user['user_email'])
+		{
+			echo "<script>alert('your email is already in use')</script>";
+			return;
+		}
+		else
+		{
+			$isEmailNotExist = true;
 
-        $sqlqueryprepare = $connection->prepare($sqlquery);
-        $sqlqueryprepare->bindParam(':username', $userName);
-        $sqlqueryprepare->bindParam(':userEmail', $userEmail);
-        $sqlqueryprepare->bindParam(':userPassword', $userPassword);
+		}
+	}
 
-        $sqlquerydata = $sqlqueryprepare->execute();
-        print_r($sqlquerydata);
-    }
+if($isEmailNotExist)
+{
+   $hashpassword = password_hash($userPassword,PASSWORD_BCRYPT);
+
+//    echo "<script>alert('hi mani ')</script>";
+
+$userRegisteredInsertQuery = "INSERT INTO `user_registered`( `user_name`, `user_email`, `user_password`) VALUES (:userName, :userEmail,:userPassword)";
+
+$registeredUserQueryPrepare = $connection->prepare($userRegisteredInsertQuery);
+$registeredUserQueryPrepare->bindParam(':userEmail', $userEmail);
+$registeredUserQueryPrepare->bindParam(':userName', $userName);
+$registeredUserQueryPrepare->bindParam(':userPassword', $hashpassword);
+
+$registeredUserQueryPrepare->execute();
+
+header('location:index.php');
+
+// print_r($registeredUserQueryPrepare);
+}
+
+{ 
+
+
+  }
 
 }
 
@@ -193,14 +238,16 @@ if (isset($_POST['submit'])) {
                     </div>
 
 
-                    <input class="btn btn-main btn-round-full" type="submit" name="submit"></input>
+					<input class="btn btn-main btn-round-full" type="submit" name="submit"></input>
                 </form>
             </div>
 			</div>
 		</div>
 	</div>
-</section>
-<section class="section testimonial-2 gray-bg">
+<!-- </section> -->
+
+
+<!-- <section class="section testimonial-2 gray-bg">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-7">
@@ -296,8 +343,11 @@ if (isset($_POST['submit'])) {
 			</div>
 		</div>
 	</div>
-</section>
-<section class="section clients">
+</section> -->
+
+
+
+<!-- <section class="section clients">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-7">
@@ -364,7 +414,10 @@ if (isset($_POST['submit'])) {
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
+
+
+
 <!-- footer Start -->
 <!-- <footer class="footer section gray-bg">
 	<div class="container">

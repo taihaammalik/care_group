@@ -1,3 +1,6 @@
+
+<?php    ob_start();  ?>
+
 <header>
 	<div class="header-top-bar">
 		<div class="container">
@@ -33,10 +36,9 @@
 			<div class="collapse navbar-collapse" id="navbarmain">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="registered.php">Regitration</a></li>
 					<li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
 					<li class="nav-item"><a class="nav-link" href="service.php">Services</a></li>
-
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="department.php" id="dropdown02" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false">Department <i class="icofont-thin-down"></i></a>
@@ -82,7 +84,30 @@
 							<li><a class="dropdown-item" href="blog-single.php">Blog Single</a></li>
 						</ul>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+
+
+
+                      <!-- //link copy into bootstrap file  -->
+
+
+					<!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <?php echo $_SESSION['userName'] ?>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+          </ul>
+        </li> -->
+		
+<!-- //link copy into bootstrap file  end-->
+
+
+
+
+					<li class="nav-item"><a class="nav-link" href="login.php">login</a></li>
+					<li class="nav-item"><a class="nav-link" href="registered.php">Regitration</a></li>
 				</ul>
 			</div>
 		</div>
